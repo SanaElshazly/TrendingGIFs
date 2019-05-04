@@ -10,21 +10,6 @@ import Foundation
 
 enum TrendingGIFsRequest: EndPointProtocol {
     
-    // MARK: - The Client API Key
-    
-    /// Replace this with your API key.
-    //private(set) var apiKey: String
-    
-    
-    // MARK: - Setting the Content Rating
-    
-    /// The rating to use for the requests.
-    //public var rating: Rating = .g
-    
-    
-    // MARK: - Filtering by Region
-    //public var language: LanguageCode = .english
-    
     case list(offset: Int)
     
     var baseURL: URL {
@@ -49,8 +34,8 @@ enum TrendingGIFsRequest: EndPointProtocol {
     var parameters: Parameters?{
         switch self {
         case let .list(offset):
-            return ["apiKey": "t0zOHsUMtDuAJ5MjNwovdnzrtVQBWiRh",
-                    "offset": offset,
+            return ["api_key": "t0zOHsUMtDuAJ5MjNwovdnzrtVQBWiRh",
+                    "offset": 50,
                     "rating": "g"]
         }
 

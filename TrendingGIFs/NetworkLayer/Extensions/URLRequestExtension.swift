@@ -26,6 +26,7 @@ extension URLRequest {
     fileprivate func configureParameters(urlParameters: Parameters, request: inout URLRequest) throws {
         let urlEncoder = URLEncoding()
         do {
+            print(urlParameters)
             try urlEncoder.encode(&request, with: urlParameters)
         } catch {
             throw error

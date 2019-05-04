@@ -23,6 +23,7 @@ public struct URLEncoding: URLEncoder {
             let queryItems = parameters.map { URLQueryItem(name: $0.key, value: "\($0.value)".addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)) }
             urlComponents.queryItems = queryItems
             urlRequest.url = urlComponents.url
+            print(urlRequest.url!)
         }
         if urlRequest.value(forHTTPHeaderField: "Content-Type") == nil {
             urlRequest.setValue("application/x-www-form-urlencoded; charset=utf-8", forHTTPHeaderField: "Content-Type")
