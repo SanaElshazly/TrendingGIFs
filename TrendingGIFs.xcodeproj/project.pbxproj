@@ -13,6 +13,7 @@
 		CF0425BA227D407A006AC3B3 /* GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0425B9227D407A006AC3B3 /* GIF.swift */; };
 		CF0425BC227D4864006AC3B3 /* TrendingGIFsViewConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0425BB227D4864006AC3B3 /* TrendingGIFsViewConfigurator.swift */; };
 		CFB0C381227D4DAF001A1DAA /* GIFsNetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB0C380227D4DAF001A1DAA /* GIFsNetworkResponse.swift */; };
+		CFB0C383227E594B001A1DAA /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB0C382227E594B001A1DAA /* Pagination.swift */; };
 		CFCF56F1227BC76D007E9EBC /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCF56F0227BC76D007E9EBC /* HTTPMethod.swift */; };
 		CFCF56F3227BCA13007E9EBC /* EndPointProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCF56F2227BCA13007E9EBC /* EndPointProtocol.swift */; };
 		CFCF56F5227BCB8F007E9EBC /* ProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCF56F4227BCB8F007E9EBC /* ProviderProtocol.swift */; };
@@ -56,6 +57,7 @@
 		CF0425B9227D407A006AC3B3 /* GIF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIF.swift; sourceTree = "<group>"; };
 		CF0425BB227D4864006AC3B3 /* TrendingGIFsViewConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingGIFsViewConfigurator.swift; sourceTree = "<group>"; };
 		CFB0C380227D4DAF001A1DAA /* GIFsNetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFsNetworkResponse.swift; sourceTree = "<group>"; };
+		CFB0C382227E594B001A1DAA /* Pagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
 		CFCF56F0227BC76D007E9EBC /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		CFCF56F2227BCA13007E9EBC /* EndPointProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointProtocol.swift; sourceTree = "<group>"; };
 		CFCF56F4227BCB8F007E9EBC /* ProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderProtocol.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 			children = (
 				CF0425B9227D407A006AC3B3 /* GIF.swift */,
 				CFB0C380227D4DAF001A1DAA /* GIFsNetworkResponse.swift */,
+				CFB0C382227E594B001A1DAA /* Pagination.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -430,6 +433,7 @@
 				CFCF56F3227BCA13007E9EBC /* EndPointProtocol.swift in Sources */,
 				CF0425B6227D3466006AC3B3 /* TrendingGIFsListPresenter.swift in Sources */,
 				CF0425B4227D343C006AC3B3 /* TrendingGIFsListViewController.swift in Sources */,
+				CFB0C383227E594B001A1DAA /* Pagination.swift in Sources */,
 				CFCF56F7227BCF88007E9EBC /* Result.swift in Sources */,
 				CFCF5708227D18FA007E9EBC /* URLRequestExtension.swift in Sources */,
 				CFF39F942279ADDC009EC531 /* AppDelegate.swift in Sources */,
