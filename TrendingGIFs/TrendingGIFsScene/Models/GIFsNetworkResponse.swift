@@ -10,6 +10,5 @@ import Foundation
 
 struct GIFsNetworkResponse: Codable {
     let data: [GIF]
-//    let pagination: Pagination
-//    let meta: Meta
+    let pagination: Pagination
 }

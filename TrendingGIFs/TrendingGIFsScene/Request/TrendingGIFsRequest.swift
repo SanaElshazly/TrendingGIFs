@@ -35,7 +35,7 @@ enum TrendingGIFsRequest: EndPointProtocol {
         switch self {
         case let .list(offset):
             return ["api_key": "t0zOHsUMtDuAJ5MjNwovdnzrtVQBWiRh",
-                    "offset": 50,
+                    "offset": offset,
                     "rating": "g"]
         }
 

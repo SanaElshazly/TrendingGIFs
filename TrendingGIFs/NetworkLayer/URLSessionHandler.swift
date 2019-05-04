@@ -23,7 +23,7 @@ final class URLSessionHandler: ProviderProtocol {
         task = session.dataTask(request: request, completionHandler: { [weak self] data, response, error in
             let httpResponse = response as? HTTPURLResponse
             self?.handleDataResponse(data: data, response: httpResponse, error: error, completion: completion)
-        })
+        })        
         task?.resume()
     }
     
