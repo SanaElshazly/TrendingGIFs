@@ -34,7 +34,9 @@ class TrendingGIFsListPresenter : TrendingGIFsListPresentable {
     
     
     func fetchTrendingGIFs() {
-        fetchTrendingGIFsUseCase.getGIFs()
+        fetchTrendingGIFsUseCase.FetchTrendingGIFs { (gifsNetworkResponse) in
+            //gifsNetworkResponse.data
+        }
     }
     
 }

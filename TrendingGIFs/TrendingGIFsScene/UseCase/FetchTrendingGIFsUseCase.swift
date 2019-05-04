@@ -8,11 +8,7 @@
 
 import Foundation
 
-protocol BaseUseCase {
-    func execute<T>(completion: @escaping (Result<T>) -> ()) where T: Decodable
-}
-
-class FetchTrendingGIFsUseCase: BaseUseCase {
+class FetchTrendingGIFsUseCase {
     
     private let sessionProvider = URLSessionHandler()
     private var isFetchInProgress = false
@@ -22,22 +18,12 @@ class FetchTrendingGIFsUseCase: BaseUseCase {
         self.toBeLoadedPage = page
     }
     
-    func execute<T>(completion: @escaping (Result<T>) -> ()) where T: Decodable {
-        sessionProvider.request(type: [GIF].self, service: TrendingGIFsRequest.list(offset: 0)) { response in
+    func FetchTrendingGIFs(completion: @escaping (GIFsNetworkResponse) -> Void) {
+        sessionProvider.request(type: GIFsNetworkResponse.self, service: TrendingGIFsRequest.list(offset: 0)) { response in
             switch response {
             case let .success(gifs):
                 print(gifs)
-            case let .failure(error):
-                print(error)
-            }
-        }
-    }
-    
-    func getGIFs() {
-        sessionProvider.request(type: [GIFsNetworkResponse].self, service: TrendingGIFsRequest.list(offset: 0)) { response in
-            switch response {
-            case let .success(gifs):
-                print(gifs)
+                completion(gifs)
             case let .failure(error):
                 print(error)
             }
