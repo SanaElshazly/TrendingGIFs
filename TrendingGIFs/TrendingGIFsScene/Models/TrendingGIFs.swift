@@ -1,5 +1,5 @@
 //
-//  GIFsNetworkResponse.swift
+//  TrendingGIFs.swift
 //  TrendingGIFs
 //
 //  Created by Sana Elshazly on 5/4/19.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct GIFsNetworkResponse: Codable {
+struct TrendingGIFs: Codable {
     let data: [GIF]
     let pagination: Pagination
 }

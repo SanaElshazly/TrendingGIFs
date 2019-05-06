@@ -8,6 +8,11 @@
 
 import Foundation
 
+// TODO: add base usecase
+/*protocol BaseUseCase {
+    func execute<T: Decodable>(completion: @escaping (Result<T>) -> ())
+}*/
+
 class FetchTrendingGIFsUseCase {
     
     private let sessionProvider = URLSessionHandler()
@@ -18,12 +23,15 @@ class FetchTrendingGIFsUseCase {
         self.toBeLoadedPage = page
     }
     
-    func FetchTrendingGIFs(completion: @escaping (GIFsNetworkResponse) -> Void) {
-        sessionProvider.request(type: GIFsNetworkResponse.self, service: TrendingGIFsRequest.list(offset: 0)) { response in
+    // TODO: for base usecase
+//    func execute<T: Decodable>(completion: @escaping (Result<T>) -> ()){
+    func fetchTrendingGIFs(completion: @escaping (TrendingGIFs) -> Void) {
+        sessionProvider.request(type: TrendingGIFs.self, service: TrendingGIFsRequest.list(offset: 0)) { response in
             switch response {
             case let .success(gifs):
                 print(gifs)
                 completion(gifs)
+                
             case let .failure(error):
                 print(error)
             }
