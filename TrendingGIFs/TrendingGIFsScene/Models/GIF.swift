@@ -21,7 +21,7 @@ struct GIF: Codable {
     let is_sticker: Int
     let import_datetime, trending_datetime: String
 //    let user: User?
-//    let images: Images
+    let images: GIFImage
     let title: String
     
 }
