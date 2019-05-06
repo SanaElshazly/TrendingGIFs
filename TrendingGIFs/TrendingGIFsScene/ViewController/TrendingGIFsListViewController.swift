@@ -16,37 +16,65 @@ protocol TrendingGIFsListViewProtocol: class {
 
 class TrendingGIFsListViewController: UIViewController {
     
+    //MARK- Outlets
+    @IBOutlet private weak var trendingGIFsCollectionView: UICollectionView!
+    //@IBOutlet private weak var indicatorView: UIActivityIndicatorView!
+    
     //MARK- Properties
     var presenter: TrendingGIFsListPresentable?
     let configurator = TrendingGIFsViewConfigurator()
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         configurator.configure(viewController: self)
+        configuretrendingGIFsTableView()
         presenter?.fetchTrendingGIFs()
+    }
+    
+    
+    private func configuretrendingGIFsTableView() {
+        trendingGIFsCollectionView.dataSource = self
+        trendingGIFsCollectionView.delegate = self
+        
+        trendingGIFsCollectionView?.backgroundColor = UIColor.clear
+        trendingGIFsCollectionView?.contentInset = UIEdgeInsets(top: 23, left: 10, bottom: 10, right: 10)
+        // Set the GiphyLayout delegate
+        if let layout = trendingGIFsCollectionView?.collectionViewLayout as? GiphyLayout {
+            layout.delegate = self
+        }
+        
+        let cellNib = UINib(nibName: "TrendingGIFCollectionViewCell", bundle: nil)
+        trendingGIFsCollectionView.register(cellNib, forCellWithReuseIdentifier: "TrendingGIFCollectionViewCell")
     }
     
 }
 
-extension TrendingGIFsListViewController:  UITableViewDataSource,UITableViewDelegate {
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 0 //presenter?.numberOfSections() ?? 0
+extension TrendingGIFsListViewController:  UICollectionViewDataSource, UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return presenter?.numberOfItemsInSection(section) ?? 0
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        return 0 //presenter?.numberOfRows(section) ?? 0
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MoviesDetailsCell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TrendingGIFCollectionViewCell", for: indexPath) as! TrendingGIFCollectionViewCell
+        cell.configureCell(with: presenter?.getGIF(at: indexPath))
         
         return cell
     }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableViewAutomaticDimension
+}
+
+//MARK: - GIPHY LAYOUT DELEGATE
+extension TrendingGIFsListViewController : GiphyLayoutDelegate {
+   
+    // 1. Returns the photo height
+    func collectionView(_ collectionView: UICollectionView, heightForPhotoAtIndexPath indexPath: IndexPath) -> CGFloat {
+        
+        return CGFloat(presenter?.heightOfCell(at: indexPath.item) ?? 200)
     }
 }
 
@@ -60,6 +88,6 @@ extension TrendingGIFsListViewController: TrendingGIFsListViewProtocol {
     }
     
     func reloadData() {
-        //moviesTableView.reloadData()
+        trendingGIFsCollectionView.reloadData()
     }
 }
