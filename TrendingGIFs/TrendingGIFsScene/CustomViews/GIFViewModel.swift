@@ -9,14 +9,13 @@
 import UIKit
 
 struct GIFViewModel {
-    var title : String?
-    var image: UIImage?
+    var title : String? = "GIF Content"
+    var image: UIImage? 
     var images: GIFImage?
 
     init() {}
-    init(title: String, image: UIImage, images: GIFImage) {
+    init(title: String? = "GIF Content" , image: UIImage? = UIImage(named: "placeholder.png")) {
         self.title = title
         self.image = image
-        self.images = images
     }
 }
