@@ -11,4 +11,5 @@ import Foundation
 struct TrendingGIFs: Codable {
     let data: [GIF]
     let pagination: Pagination
+    let meta: Meta
 }
