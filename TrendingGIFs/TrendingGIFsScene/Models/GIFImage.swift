@@ -7,8 +7,10 @@
 //
 
 import Foundation
+
 struct GIFImage: Codable {
     let fixed_width: FixedWidth
+    let preview_gif: PreviewGIF
 }
 
 struct FixedWidth: Codable {
@@ -19,4 +21,11 @@ struct FixedWidth: Codable {
     let webp: String
     let webp_size: String
     let frames, hash: String?
+    
+}
+
+struct PreviewGIF: Codable {
+    let url: String
+    let width, height: String
+    let size: String?
 }
