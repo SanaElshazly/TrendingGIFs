@@ -7,12 +7,12 @@
 //
 
 import UIKit
+import Reusable
 import SDWebImage
 
-class TrendingGIFCollectionViewCell: UICollectionViewCell {
+class TrendingGIFCollectionViewCell: UICollectionViewCell, NibReusable {
     
-    @IBOutlet weak var gifImageView: UIImageView!
-    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var gifView: DetailedGIFView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,9 +23,8 @@ class TrendingGIFCollectionViewCell: UICollectionViewCell {
         guard gif != nil else {
             return
         }
-        self.titleLabel.text = gif?.title
-        gifImageView.sd_setImage(with: URL(string: gif?.images?.fixed_width.url ?? "placeholder.png"))
-
+        
+        self.gifView.configure(with: gif ?? GIFViewModel())
     }
     
 }

@@ -19,31 +19,22 @@
                 <rect key="frame" x="0.0" y="0.0" width="115" height="115"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mk7-RC-KCp">
-                        <rect key="frame" x="0.0" y="0.0" width="115" height="94.5"/>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Qo-T9-WSd">
-                        <rect key="frame" x="0.0" y="94.5" width="115" height="20.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zuR-0Y-3Wd" customClass="DetailedGIFView" customModule="TrendingGIFs" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="115" height="115"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="2Qo-T9-WSd" secondAttribute="bottom" id="Hu3-oZ-aiN"/>
-                <constraint firstItem="mk7-RC-KCp" firstAttribute="leading" secondItem="jj6-FL-SLh" secondAttribute="leading" id="NpT-zk-feW"/>
-                <constraint firstItem="mk7-RC-KCp" firstAttribute="top" secondItem="jj6-FL-SLh" secondAttribute="top" id="QnY-no-w1K"/>
-                <constraint firstItem="2Qo-T9-WSd" firstAttribute="leading" secondItem="jj6-FL-SLh" secondAttribute="leading" id="h02-sw-jHx"/>
-                <constraint firstAttribute="trailing" secondItem="mk7-RC-KCp" secondAttribute="trailing" id="lv0-eY-QrH"/>
-                <constraint firstAttribute="trailing" secondItem="2Qo-T9-WSd" secondAttribute="trailing" id="pDN-Wz-CbW"/>
-                <constraint firstItem="2Qo-T9-WSd" firstAttribute="top" secondItem="mk7-RC-KCp" secondAttribute="bottom" id="sAN-kn-iec"/>
+                <constraint firstItem="zuR-0Y-3Wd" firstAttribute="top" secondItem="jj6-FL-SLh" secondAttribute="top" id="J31-9B-KHF"/>
+                <constraint firstAttribute="trailing" secondItem="zuR-0Y-3Wd" secondAttribute="trailing" id="NyO-be-bbJ"/>
+                <constraint firstAttribute="bottom" secondItem="zuR-0Y-3Wd" secondAttribute="bottom" id="SIt-Sn-fkM"/>
+                <constraint firstItem="zuR-0Y-3Wd" firstAttribute="leading" secondItem="jj6-FL-SLh" secondAttribute="leading" id="TK9-Gd-BCT"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="pA6-pt-GA3"/>
             <size key="customSize" width="115" height="115"/>
             <connections>
-                <outlet property="gifImageView" destination="mk7-RC-KCp" id="Dt7-S4-cdb"/>
-                <outlet property="titleLabel" destination="2Qo-T9-WSd" id="tNK-pg-MZf"/>
+                <outlet property="gifView" destination="zuR-0Y-3Wd" id="x57-en-f7w"/>
             </connections>
             <point key="canvasLocation" x="-1450.4000000000001" y="36.431784107946029"/>
         </collectionViewCell>
