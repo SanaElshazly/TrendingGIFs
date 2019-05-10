@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="a7w-1l-b3j">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,16 +10,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--TrendingGI Fs List View Controller-->
+        <!--TrendingGI Fs View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="TrendingGIFsListViewController" customModule="TrendingGIFs" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="TrendingGIFsViewController" customModule="TrendingGIFs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kKX-GL-UzE">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewLayout key="collectionViewLayout" id="3XS-NI-umb" customClass="GiphyLayout" customModule="TrendingGIFs" customModuleProvider="target"/>
                                 <cells>
@@ -43,12 +43,62 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="SUW-7w-3uB"/>
                     <connections>
                         <outlet property="trendingGIFsCollectionView" destination="kKX-GL-UzE" id="VQw-Jf-x0E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1326" y="-46"/>
+        </scene>
+        <!--DetailedGIF View Controller-->
+        <scene sceneID="2Ns-DG-rLA">
+            <objects>
+                <viewController storyboardIdentifier="DetailedGIFViewController" id="4MA-gJ-yfH" customClass="DetailedGIFViewController" customModule="TrendingGIFs" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="x5n-cn-LV1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QLT-e4-TC7" customClass="AnimatedGIFView" customModule="TrendingGIFs" customModuleProvider="target">
+                                <rect key="frame" x="10" y="100" width="355" height="467"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QLT-e4-TC7" firstAttribute="leading" secondItem="Gmr-Yx-O8y" secondAttribute="leading" constant="10" id="Lbr-Mp-DuQ"/>
+                            <constraint firstItem="QLT-e4-TC7" firstAttribute="centerY" secondItem="x5n-cn-LV1" secondAttribute="centerY" id="cn0-Vy-xGZ"/>
+                            <constraint firstItem="QLT-e4-TC7" firstAttribute="top" secondItem="Gmr-Yx-O8y" secondAttribute="top" constant="80" id="o5u-kT-a7m"/>
+                            <constraint firstItem="Gmr-Yx-O8y" firstAttribute="trailing" secondItem="QLT-e4-TC7" secondAttribute="trailing" constant="10" id="pSX-ea-BNX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Gmr-Yx-O8y"/>
+                    </view>
+                    <connections>
+                        <outlet property="animatedGIFView" destination="QLT-e4-TC7" id="gcg-xz-qwQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eZu-wi-xwW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2500" y="-301"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Svl-lE-41u">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="a7w-1l-b3j" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="a2H-Hy-km9">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="hJk-i6-X4Q"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LhO-SX-WdS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1325.5999999999999" y="-851.42428785607206"/>
         </scene>
     </scenes>
 </document>
