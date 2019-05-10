@@ -8,9 +8,11 @@
 
 import Foundation
 
-enum TrendingGIFsRequest: EndPointProtocol {
+enum GiphyRequest: EndPointProtocol {
     
-    case list(offset: Int)
+    case trendingGIFs(offset: Int)
+    case randomGIF
+
     
     var baseURL: URL {
         return URL(string: "https://api.giphy.com/v1/gifs/")!
@@ -18,8 +20,10 @@ enum TrendingGIFsRequest: EndPointProtocol {
     
     var path: String {
         switch self {
-        case .list:
+        case .trendingGIFs:
             return "trending"
+        case .randomGIF:
+            return "random"
         }
     }
     
@@ -33,9 +37,13 @@ enum TrendingGIFsRequest: EndPointProtocol {
     
     var parameters: Parameters?{
         switch self {
-        case let .list(offset):
+        case let .trendingGIFs(offset):
             return ["api_key": "t0zOHsUMtDuAJ5MjNwovdnzrtVQBWiRh",
+                    "limit": 50,
                     "offset": offset,
+                    "rating": "g"]
+        case .randomGIF:
+            return ["api_key": "t0zOHsUMtDuAJ5MjNwovdnzrtVQBWiRh",
                     "rating": "g"]
         }
 
