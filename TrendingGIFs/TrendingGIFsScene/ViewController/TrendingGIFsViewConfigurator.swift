@@ -9,10 +9,10 @@
 import Foundation
 
 class TrendingGIFsViewConfigurator: NSObject {
-    func configure(viewController: TrendingGIFsListViewController) {
+    func configure(viewController: TrendingGIFsViewController) {
         let fetchTrendingGIFsUseCase = FetchTrendingGIFsUseCase()
-//        let router = MoviesListNavigator(viewController: moviesListViewController)
-        let presenter = TrendingGIFsListPresenter(view: viewController, fetchTrendingGIFsUseCase: fetchTrendingGIFsUseCase)
+        let router = TrendingGIFsViewRouter(viewController: viewController)
+        let presenter = TrendingGIFsListPresenter(view: viewController, fetchTrendingGIFsUseCase: fetchTrendingGIFsUseCase, router: router)
         viewController.presenter = presenter
     }
 }

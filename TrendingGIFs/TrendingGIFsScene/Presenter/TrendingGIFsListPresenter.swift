@@ -9,47 +9,62 @@
 import Foundation
 
 protocol TrendingGIFsListPresentable {
-    func fetchTrendingGIFs()
+    //func fetchTrendingGIFs()
+    func fetchTrendingGIFs(with offset: Int)
     func gifsCount() -> Int
+    
     //func downloadGIFImage(_ indexPath: IndexPath)
     func populateGIFDetails(_ gif: GIF) ->  GIFViewModel
-    func getGIF(at index: IndexPath) -> GIFViewModel
-    //func navigateToMovieDetailViewController(_ newMovieDetails: @escaping addMovieDetailsAction)
+    func gif(at index: IndexPath) -> GIFViewModel
+
+    func navigateToDetailedGIFViewController(_ detailedGIF: GIFViewModel)
     func heightOfCell(at index: Int) -> Int
     func numberOfItemsInSection(_ section: Int) -> Int
 }
+
 class TrendingGIFsListPresenter : TrendingGIFsListPresentable {
     
     private var fetchTrendingGIFsUseCase: FetchTrendingGIFsUseCase
-    fileprivate weak var view: TrendingGIFsListViewProtocol?
+    fileprivate weak var view: TrendingGIFsViewProtocol?
+    private var router: TrendingGIFsViewRouter?
     var gifsList = [GIFViewModel]()
 
     
     //MARK -: Intialization
     
-    init(view: TrendingGIFsListViewProtocol,
-         fetchTrendingGIFsUseCase: FetchTrendingGIFsUseCase) {
+    init(view: TrendingGIFsViewProtocol,
+         fetchTrendingGIFsUseCase: FetchTrendingGIFsUseCase,
+         router: TrendingGIFsViewRouter) {
         self.view = view
         self.fetchTrendingGIFsUseCase = fetchTrendingGIFsUseCase
+        self.router = router
     }
     
-    
-    func fetchTrendingGIFs() {
+    func fetchTrendingGIFs(with offset: Int = 0) {
+        self.view?.showLoading()
+        fetchTrendingGIFsUseCase.setOffset(offset)
         fetchTrendingGIFsUseCase.fetchTrendingGIFs { (trendingGIFs) in
             //trendingGIFs.data
-            
+            print(trendingGIFs.pagination.total_count)
+            print(trendingGIFs.pagination.offset)
+            print(trendingGIFs.pagination.count)
+
             DispatchQueue.main.async {
                 for gif in trendingGIFs.data {
                     self.gifsList.append(self.populateGIFDetails(gif))
                 }
-                self.view?.reloadData()
+                
+                self.view?.updateGIFs(with: self.gifsList)
+//                self.view?.reloadData()
+//                self.view?.hideLoading()
+
             }
-            
         }
     }
     
     //MARK:- UI Handling
-    func getGIF(at index: IndexPath) -> GIFViewModel {
+    
+    func gif(at index: IndexPath) -> GIFViewModel {
         let gif = gifsList[index.row]
         return gif
     }
@@ -62,8 +77,15 @@ class TrendingGIFsListPresenter : TrendingGIFsListPresentable {
         return gifViewModel
     }
     
+    // MARK:- Handle Navigation
+
+    func navigateToDetailedGIFViewController(_ detailedGIF: GIFViewModel) {
+        router?.configureDetailedGIF(detailedGIF)
+        router?.navigate(to: .showDetailedGIF)
+    }
+    
 }
-// MARK: - Handle TableView
+// MARK: - Handle CollectionView
 extension TrendingGIFsListPresenter {
     
     func gifsCount() -> Int {
