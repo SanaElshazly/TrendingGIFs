@@ -17,16 +17,16 @@ class FetchTrendingGIFsUseCase {
     
     private let sessionProvider = URLSessionHandler()
     private var isFetchInProgress = false
-    private var toBeLoadedPage = 0
+    private var offset = 0
     
-    func setPageNumber(_ page: Int) {
-        self.toBeLoadedPage = page
+    func setOffset(_ offset: Int) {
+        self.offset = offset
     }
     
     // TODO: for base usecase
 //    func execute<T: Decodable>(completion: @escaping (Result<T>) -> ()){
     func fetchTrendingGIFs(completion: @escaping (TrendingGIFs) -> Void) {
-        sessionProvider.request(type: TrendingGIFs.self, service: TrendingGIFsRequest.list(offset: 0)) { response in
+        sessionProvider.request(type: TrendingGIFs.self, service: GiphyRequest.trendingGIFs(offset: offset)) { response in
             switch response {
             case let .success(gifs):
                 print(gifs)
