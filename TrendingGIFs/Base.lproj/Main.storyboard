@@ -20,7 +20,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kKX-GL-UzE">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewLayout key="collectionViewLayout" id="KAb-Lo-3p5" customClass="GiphyLayout" customModule="TrendingGIFs" customModuleProvider="target"/>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="eDz-Rc-iLB">
@@ -33,18 +33,29 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="LMX-Co-U9j">
+                                <rect key="frame" x="177.5" y="637" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="6XZ-BN-GrR"/>
+                                    <constraint firstAttribute="width" constant="20" id="xuy-4S-wFH"/>
+                                </constraints>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kKX-GL-UzE" secondAttribute="bottom" id="UIm-is-yff"/>
                             <constraint firstItem="kKX-GL-UzE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UcZ-na-r3O"/>
                             <constraint firstItem="kKX-GL-UzE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Xxh-Hn-Jsn"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kKX-GL-UzE" secondAttribute="trailing" id="jUc-jf-vxt"/>
+                            <constraint firstItem="LMX-Co-U9j" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oG9-T0-9Yw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LMX-Co-U9j" secondAttribute="bottom" constant="10" id="rNy-Jm-dmz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="SUW-7w-3uB"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="LMX-Co-U9j" id="f1K-ys-opH"/>
                         <outlet property="trendingGIFsCollectionView" destination="kKX-GL-UzE" id="VQw-Jf-x0E"/>
                     </connections>
                 </viewController>
@@ -90,6 +101,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="a2H-Hy-km9">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.49803921568627452" green="0.3529411764705882" blue="0.51372549019607838" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.49803921568627452" green="0.3529411764705882" blue="0.51372549019607838" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

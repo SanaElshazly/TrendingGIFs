@@ -19,7 +19,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="115" height="115"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zuR-0Y-3Wd" customClass="DetailedGIFView" customModule="TrendingGIFs" customModuleProvider="target">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zuR-0Y-3Wd" customClass="GIFView" customModule="TrendingGIFs" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="115" height="115"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>

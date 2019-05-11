@@ -12,7 +12,18 @@ enum GiphyRequest: EndPointProtocol {
     
     case trendingGIFs(offset: Int)
     case randomGIF
-
+    
+    var api_key: String {
+        return "t0zOHsUMtDuAJ5MjNwovdnzrtVQBWiRh"
+    }
+    
+    var limit: Int {
+        return 20
+    }
+    
+    var rating: String {
+        return "g"
+    }
     
     var baseURL: URL {
         return URL(string: "https://api.giphy.com/v1/gifs/")!
@@ -38,13 +49,14 @@ enum GiphyRequest: EndPointProtocol {
     var parameters: Parameters?{
         switch self {
         case let .trendingGIFs(offset):
-            return ["api_key": "t0zOHsUMtDuAJ5MjNwovdnzrtVQBWiRh",
-                    "limit": 20,
+            return ["api_key": api_key,
+                    "limit": limit,
                     "offset": offset,
-                    "rating": "g"]
+                    "rating": rating]
+            
         case .randomGIF:
-            return ["api_key": "t0zOHsUMtDuAJ5MjNwovdnzrtVQBWiRh",
-                    "rating": "g"]
+            return ["api_key": api_key,
+                    "rating": rating]
         }
 
     }

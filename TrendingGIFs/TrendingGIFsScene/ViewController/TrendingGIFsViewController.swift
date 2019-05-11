@@ -19,10 +19,10 @@ class TrendingGIFsViewController: UIViewController {
     
     //MARK- Outlets
     @IBOutlet private weak var trendingGIFsCollectionView: UICollectionView!
-    var footerView:CustomFooterView?
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 
     //MARK- Properties
-    var presenter: TrendingGIFsListPresentable?
+    var presenter: TrendingGIFsPresentable?
     let configurator = TrendingGIFsViewConfigurator()
     var gifsList : [GIFViewModel] = [] {
         didSet{
@@ -69,7 +69,7 @@ class TrendingGIFsViewController: UIViewController {
 extension TrendingGIFsViewController:  UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return presenter?.numberOfItemsInSection(section) ?? 0
+        return gifsList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -91,7 +91,7 @@ extension TrendingGIFsViewController:  UICollectionViewDataSource, UICollectionV
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        presenter?.navigateToDetailedGIFViewController(presenter?.gif(at: indexPath) ?? GIFViewModel())
+        presenter?.navigateToDetailedGIFViewController(gifsList[indexPath.row])
     }
 }
 
@@ -107,12 +107,13 @@ extension TrendingGIFsViewController : GiphyLayoutDelegate {
 }
 
 extension TrendingGIFsViewController: TrendingGIFsViewProtocol {
+
     func showLoading() {
-//        loadingView.showLoading()
+        activityIndicator.startAnimating()
     }
     
     func hideLoading() {
-//        loadingView.hideLoading()
+        activityIndicator.stopAnimating()
     }
     
     func reloadData() {

@@ -10,7 +10,7 @@
 		5817E9C8A5B9738DFC48150B /* libPods-TrendingGIFsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C958F0E795474F5E58F15832 /* libPods-TrendingGIFsTests.a */; };
 		A2600992C65D00B09C01D714 /* libPods-TrendingGIFsUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1436EE1F673D861F225432A /* libPods-TrendingGIFsUITests.a */; };
 		CF0425B4227D343C006AC3B3 /* TrendingGIFsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0425B3227D343B006AC3B3 /* TrendingGIFsViewController.swift */; };
-		CF0425B6227D3466006AC3B3 /* TrendingGIFsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0425B5227D3466006AC3B3 /* TrendingGIFsListPresenter.swift */; };
+		CF0425B6227D3466006AC3B3 /* TrendingGIFsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0425B5227D3466006AC3B3 /* TrendingGIFsPresenter.swift */; };
 		CF0425B8227D38B1006AC3B3 /* FetchTrendingGIFsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0425B7227D38B1006AC3B3 /* FetchTrendingGIFsUseCase.swift */; };
 		CF0425BA227D407A006AC3B3 /* GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0425B9227D407A006AC3B3 /* GIF.swift */; };
 		CF0425BC227D4864006AC3B3 /* TrendingGIFsViewConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0425BB227D4864006AC3B3 /* TrendingGIFsViewConfigurator.swift */; };
@@ -18,8 +18,6 @@
 		CF8AE17F2283B57A0063BDC2 /* AnimatedGIFView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF8AE17E2283B57A0063BDC2 /* AnimatedGIFView.xib */; };
 		CF8AE1842283C74C0063BDC2 /* RandomGIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8AE1832283C74C0063BDC2 /* RandomGIF.swift */; };
 		CF8AE1862284EF670063BDC2 /* Meta.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8AE1852284EF670063BDC2 /* Meta.swift */; };
-		CF8AE1882284F9E10063BDC2 /* CustomFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8AE1872284F9E10063BDC2 /* CustomFooterView.swift */; };
-		CF8AE18A2284F9F80063BDC2 /* CustomFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF8AE1892284F9F80063BDC2 /* CustomFooterView.xib */; };
 		CF8AE18C22864B520063BDC2 /* GiphyLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8AE18B22864B520063BDC2 /* GiphyLayout.swift */; };
 		CFB0C381227D4DAF001A1DAA /* TrendingGIFs.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB0C380227D4DAF001A1DAA /* TrendingGIFs.swift */; };
 		CFB0C383227E594B001A1DAA /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB0C382227E594B001A1DAA /* Pagination.swift */; };
@@ -31,8 +29,8 @@
 		CFBA877522824E060028DCEE /* DetailedGIFViewConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBA877422824E060028DCEE /* DetailedGIFViewConfigurator.swift */; };
 		CFBA877722824E920028DCEE /* DetailedGIFPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBA877622824E920028DCEE /* DetailedGIFPresenter.swift */; };
 		CFBA877B22824FED0028DCEE /* FetchRandomGIFUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBA877A22824FED0028DCEE /* FetchRandomGIFUseCase.swift */; };
-		CFBA877F22836A560028DCEE /* DetailedGIFView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFBA877E22836A560028DCEE /* DetailedGIFView.xib */; };
-		CFBA878322836B1A0028DCEE /* DetailedGIFView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBA878222836B1A0028DCEE /* DetailedGIFView.swift */; };
+		CFBA877F22836A560028DCEE /* GIFView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFBA877E22836A560028DCEE /* GIFView.xib */; };
+		CFBA878322836B1A0028DCEE /* GIFView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBA878222836B1A0028DCEE /* GIFView.swift */; };
 		CFBA8785228371A10028DCEE /* TrendingGIFsViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBA8784228371A10028DCEE /* TrendingGIFsViewRouter.swift */; };
 		CFCF56F1227BC76D007E9EBC /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCF56F0227BC76D007E9EBC /* HTTPMethod.swift */; };
 		CFCF56F3227BCA13007E9EBC /* EndPointProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCF56F2227BCA13007E9EBC /* EndPointProtocol.swift */; };
@@ -80,7 +78,7 @@
 		BF15025072EDBC9834726677 /* Pods-TrendingGIFsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrendingGIFsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrendingGIFsUITests/Pods-TrendingGIFsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C958F0E795474F5E58F15832 /* libPods-TrendingGIFsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TrendingGIFsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF0425B3227D343B006AC3B3 /* TrendingGIFsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingGIFsViewController.swift; sourceTree = "<group>"; };
-		CF0425B5227D3466006AC3B3 /* TrendingGIFsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingGIFsListPresenter.swift; sourceTree = "<group>"; };
+		CF0425B5227D3466006AC3B3 /* TrendingGIFsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingGIFsPresenter.swift; sourceTree = "<group>"; };
 		CF0425B7227D38B1006AC3B3 /* FetchTrendingGIFsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchTrendingGIFsUseCase.swift; sourceTree = "<group>"; };
 		CF0425B9227D407A006AC3B3 /* GIF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIF.swift; sourceTree = "<group>"; };
 		CF0425BB227D4864006AC3B3 /* TrendingGIFsViewConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingGIFsViewConfigurator.swift; sourceTree = "<group>"; };
@@ -88,8 +86,6 @@
 		CF8AE17E2283B57A0063BDC2 /* AnimatedGIFView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimatedGIFView.xib; sourceTree = "<group>"; };
 		CF8AE1832283C74C0063BDC2 /* RandomGIF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomGIF.swift; sourceTree = "<group>"; };
 		CF8AE1852284EF670063BDC2 /* Meta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meta.swift; sourceTree = "<group>"; };
-		CF8AE1872284F9E10063BDC2 /* CustomFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFooterView.swift; sourceTree = "<group>"; };
-		CF8AE1892284F9F80063BDC2 /* CustomFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomFooterView.xib; sourceTree = "<group>"; };
 		CF8AE18B22864B520063BDC2 /* GiphyLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiphyLayout.swift; sourceTree = "<group>"; };
 		CFB0C380227D4DAF001A1DAA /* TrendingGIFs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingGIFs.swift; sourceTree = "<group>"; };
 		CFB0C382227E594B001A1DAA /* Pagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
@@ -101,8 +97,8 @@
 		CFBA877422824E060028DCEE /* DetailedGIFViewConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedGIFViewConfigurator.swift; sourceTree = "<group>"; };
 		CFBA877622824E920028DCEE /* DetailedGIFPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedGIFPresenter.swift; sourceTree = "<group>"; };
 		CFBA877A22824FED0028DCEE /* FetchRandomGIFUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchRandomGIFUseCase.swift; sourceTree = "<group>"; };
-		CFBA877E22836A560028DCEE /* DetailedGIFView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailedGIFView.xib; sourceTree = "<group>"; };
-		CFBA878222836B1A0028DCEE /* DetailedGIFView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedGIFView.swift; sourceTree = "<group>"; };
+		CFBA877E22836A560028DCEE /* GIFView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GIFView.xib; sourceTree = "<group>"; };
+		CFBA878222836B1A0028DCEE /* GIFView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFView.swift; sourceTree = "<group>"; };
 		CFBA8784228371A10028DCEE /* TrendingGIFsViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingGIFsViewRouter.swift; sourceTree = "<group>"; };
 		CFCF56F0227BC76D007E9EBC /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		CFCF56F2227BCA13007E9EBC /* EndPointProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointProtocol.swift; sourceTree = "<group>"; };
@@ -205,7 +201,7 @@
 		CF0425B0227D33DD006AC3B3 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				CF0425B5227D3466006AC3B3 /* TrendingGIFsListPresenter.swift */,
+				CF0425B5227D3466006AC3B3 /* TrendingGIFsPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -238,10 +234,8 @@
 		CFB0C384227EEDC8001A1DAA /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
-				CF8AE1892284F9F80063BDC2 /* CustomFooterView.xib */,
-				CF8AE1872284F9E10063BDC2 /* CustomFooterView.swift */,
-				CFBA877E22836A560028DCEE /* DetailedGIFView.xib */,
-				CFBA878222836B1A0028DCEE /* DetailedGIFView.swift */,
+				CFBA877E22836A560028DCEE /* GIFView.xib */,
+				CFBA878222836B1A0028DCEE /* GIFView.swift */,
 				CFB0C385227EEDE8001A1DAA /* TrendingGIFCollectionViewCell.xib */,
 				CFB0C387227EF724001A1DAA /* TrendingGIFCollectionViewCell.swift */,
 				CFBA875A227F00040028DCEE /* GIFViewModel.swift */,
@@ -488,7 +482,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0900;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Sana Elshazly";
 				TargetAttributes = {
 					CFF39F8F2279ADDC009EC531 = {
@@ -532,10 +526,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF8AE18A2284F9F80063BDC2 /* CustomFooterView.xib in Resources */,
 				CFF39F9E2279ADDC009EC531 /* LaunchScreen.storyboard in Resources */,
 				CFB0C386227EEDE8001A1DAA /* TrendingGIFCollectionViewCell.xib in Resources */,
-				CFBA877F22836A560028DCEE /* DetailedGIFView.xib in Resources */,
+				CFBA877F22836A560028DCEE /* GIFView.xib in Resources */,
 				CFF39F9B2279ADDC009EC531 /* Assets.xcassets in Resources */,
 				CF8AE17F2283B57A0063BDC2 /* AnimatedGIFView.xib in Resources */,
 				CFF39F992279ADDC009EC531 /* Main.storyboard in Resources */,
@@ -637,9 +630,9 @@
 				CFBA877B22824FED0028DCEE /* FetchRandomGIFUseCase.swift in Sources */,
 				CFBA8785228371A10028DCEE /* TrendingGIFsViewRouter.swift in Sources */,
 				CFBA877722824E920028DCEE /* DetailedGIFPresenter.swift in Sources */,
-				CFBA878322836B1A0028DCEE /* DetailedGIFView.swift in Sources */,
+				CFBA878322836B1A0028DCEE /* GIFView.swift in Sources */,
 				CFCF56F3227BCA13007E9EBC /* EndPointProtocol.swift in Sources */,
-				CF0425B6227D3466006AC3B3 /* TrendingGIFsListPresenter.swift in Sources */,
+				CF0425B6227D3466006AC3B3 /* TrendingGIFsPresenter.swift in Sources */,
 				CFB0C388227EF724001A1DAA /* TrendingGIFCollectionViewCell.swift in Sources */,
 				CF0425B4227D343C006AC3B3 /* TrendingGIFsViewController.swift in Sources */,
 				CFB0C383227E594B001A1DAA /* Pagination.swift in Sources */,
@@ -650,7 +643,6 @@
 				CFCF56F9227D08F1007E9EBC /* URLEncoder.swift in Sources */,
 				CFCF56FF227D0D11007E9EBC /* NetworkError.swift in Sources */,
 				CFCF56F5227BCB8F007E9EBC /* ProviderProtocol.swift in Sources */,
-				CF8AE1882284F9E10063BDC2 /* CustomFooterView.swift in Sources */,
 				CFCF570A227D1961007E9EBC /* URLComponentExtension.swift in Sources */,
 				CFBA875B227F00040028DCEE /* GIFViewModel.swift in Sources */,
 			);
@@ -721,6 +713,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -728,6 +721,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -778,6 +772,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -785,6 +780,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -858,7 +854,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = picnic.TrendingGIFsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TrendingGIFs.app/TrendingGIFs";
 			};
@@ -876,7 +872,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = picnic.TrendingGIFsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TrendingGIFs.app/TrendingGIFs";
 			};
@@ -893,7 +889,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = picnic.TrendingGIFsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = TrendingGIFs;
 			};
@@ -910,7 +906,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = picnic.TrendingGIFsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = TrendingGIFs;
 			};

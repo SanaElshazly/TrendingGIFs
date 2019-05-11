@@ -8,11 +8,6 @@
 
 import Foundation
 
-// TODO: add base usecase
-/*protocol BaseUseCase {
-    func execute<T: Decodable>(completion: @escaping (Result<T>) -> ())
-}*/
-
 class FetchTrendingGIFsUseCase {
     
     private let sessionProvider = URLSessionHandler()
@@ -23,8 +18,6 @@ class FetchTrendingGIFsUseCase {
         self.offset = offset
     }
     
-    // TODO: for base usecase
-//    func execute<T: Decodable>(completion: @escaping (Result<T>) -> ()){
     func fetchTrendingGIFs(completion: @escaping (TrendingGIFs) -> Void) {
         sessionProvider.request(type: TrendingGIFs.self, service: GiphyRequest.trendingGIFs(offset: offset)) { response in
             switch response {

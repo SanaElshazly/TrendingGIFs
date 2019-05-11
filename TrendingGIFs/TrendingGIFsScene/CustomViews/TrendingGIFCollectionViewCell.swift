@@ -12,7 +12,7 @@ import SDWebImage
 
 class TrendingGIFCollectionViewCell: UICollectionViewCell, NibReusable {
     
-    @IBOutlet weak var gifView: DetailedGIFView!
+    @IBOutlet weak var gifView: GIFView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

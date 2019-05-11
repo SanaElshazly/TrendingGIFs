@@ -1,5 +1,5 @@
 //
-//  TrendingGIFsListPresenter.swift
+//  TrendingGIFsPresenter.swift
 //  TrendingGIFs
 //
 //  Created by Sana Elshazly on 5/4/19.
@@ -8,28 +8,21 @@
 
 import Foundation
 
-protocol TrendingGIFsListPresentable {
-    //func fetchTrendingGIFs()
+protocol TrendingGIFsPresentable {
     func fetchTrendingGIFs(with offset: Int)
-    func gifsCount() -> Int
-    
-    //func downloadGIFImage(_ indexPath: IndexPath)
     func populateGIFDetails(_ gif: GIF) ->  GIFViewModel
     func gif(at index: IndexPath) -> GIFViewModel
-
-    func navigateToDetailedGIFViewController(_ detailedGIF: GIFViewModel)
     func heightOfCell(at index: Int) -> Int
-    func numberOfItemsInSection(_ section: Int) -> Int
+    func navigateToDetailedGIFViewController(_ detailedGIF: GIFViewModel)
 }
 
-class TrendingGIFsListPresenter : TrendingGIFsListPresentable {
+class TrendingGIFsPresenter : TrendingGIFsPresentable {
     
     private var fetchTrendingGIFsUseCase: FetchTrendingGIFsUseCase
     fileprivate weak var view: TrendingGIFsViewProtocol?
     private var router: TrendingGIFsViewRouter?
     var gifsList = [GIFViewModel]()
 
-    
     //MARK -: Intialization
     
     init(view: TrendingGIFsViewProtocol,
@@ -44,19 +37,12 @@ class TrendingGIFsListPresenter : TrendingGIFsListPresentable {
         self.view?.showLoading()
         fetchTrendingGIFsUseCase.setOffset(offset)
         fetchTrendingGIFsUseCase.fetchTrendingGIFs { (trendingGIFs) in
-            //trendingGIFs.data
-            print(trendingGIFs.pagination.total_count)
-            print(trendingGIFs.pagination.offset)
-            print(trendingGIFs.pagination.count)
-
             DispatchQueue.main.async {
                 for gif in trendingGIFs.data {
                     self.gifsList.append(self.populateGIFDetails(gif))
                 }
-                
                 self.view?.updateGIFs(with: self.gifsList)
-//                self.view?.reloadData()
-//                self.view?.hideLoading()
+                self.view?.hideLoading()
 
             }
         }
@@ -73,7 +59,6 @@ class TrendingGIFsListPresenter : TrendingGIFsListPresentable {
         var gifViewModel = GIFViewModel()
         gifViewModel.title = gif.title
         gifViewModel.images = gif.images
-//        gifViewModel.image = gif.
         return gifViewModel
     }
     
@@ -83,20 +68,12 @@ class TrendingGIFsListPresenter : TrendingGIFsListPresentable {
         router?.configureDetailedGIF(detailedGIF)
         router?.navigate(to: .showDetailedGIF)
     }
-    
 }
+
 // MARK: - Handle CollectionView
-extension TrendingGIFsListPresenter {
-    
-    func gifsCount() -> Int {
-        return self.gifsList.count
-    }
-    
+
+extension TrendingGIFsPresenter {
     func heightOfCell(at index: Int) -> Int {
         return Int(self.gifsList[index].images?.fixed_width.height ?? "200") ?? 200
-    }
-    
-    func numberOfItemsInSection(_ section: Int) -> Int {
-        return gifsCount()
     }
 }
