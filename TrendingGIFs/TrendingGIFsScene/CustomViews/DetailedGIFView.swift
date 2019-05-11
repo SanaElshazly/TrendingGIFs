@@ -11,7 +11,7 @@ import Reusable
 
 class DetailedGIFView: UIView, NibOwnerLoadable {
     
-    @IBOutlet weak var titleLabel: UILabel!
+//    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var gifImageView: UIImageView!
 
     override init(frame: CGRect) {
@@ -34,7 +34,7 @@ class DetailedGIFView: UIView, NibOwnerLoadable {
     
 
     func configure(with gif: GIFViewModel) {
-        self.titleLabel.text = gif.title
+//        self.titleLabel.text = gif.title
         gifImageView.sd_setImage(with: URL(string: gif.images?.preview_gif.url ?? "placeholder.png"))
     }
 }

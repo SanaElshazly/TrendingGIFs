@@ -16,7 +16,6 @@ class TrendingGIFCollectionViewCell: UICollectionViewCell, NibReusable {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     
     func configureCell(with gif: GIFViewModel?)  {

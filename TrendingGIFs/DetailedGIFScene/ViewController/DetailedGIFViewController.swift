@@ -14,7 +14,6 @@ protocol DetailedGIFViewProtocol: class {
     func showLoading()
     func hideLoading()
     func configureAnimatedGIFView(with gif: GIFViewModel)
-//    func configureAnimatedGIFView(with gif: GIFViewModel, playerController: AVPlayerViewController)
 }
 
 class DetailedGIFViewController: UIViewController {

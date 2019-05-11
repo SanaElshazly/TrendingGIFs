@@ -11,7 +11,6 @@ import Foundation
 protocol DetailedGIFPresentable {
     func startRandomGIF()
     func stopRandomGIF()
-    
 }
 
 class DetailedGIFPresenter : DetailedGIFPresentable {
@@ -33,19 +32,12 @@ class DetailedGIFPresenter : DetailedGIFPresentable {
     @objc func fetchRandomGIF() {
         self.view?.showLoading()
         fetchRandomGIFUseCase.fetchRandomGIF { (randomGIF) in
-            //trendingGIFs.data
             print(randomGIF.title)
             
             DispatchQueue.main.async {
-                
-//                for gif in trendingGIFs.data {
-//                    self.gifsList.append(self.populateGIFDetails(gif))
-//                }
                 self.view?.configureAnimatedGIFView(with: self.populateGIFDetails(randomGIF))
                 
-                //self.populateGIFDetails(randomGIF)
-                self.view?.hideLoading()
-                
+                    self.view?.hideLoading()
             }
         }
     }
@@ -58,13 +50,10 @@ class DetailedGIFPresenter : DetailedGIFPresentable {
         timer.invalidate()
     }
     
-    
-    
     func populateGIFDetails(_ gif: GIF) ->  GIFViewModel {
         var gifViewModel = GIFViewModel()
         gifViewModel.title = gif.title
         gifViewModel.images = gif.images
-        //        gifViewModel.image = gif.
         return gifViewModel
     }
     

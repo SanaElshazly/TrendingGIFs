@@ -13,7 +13,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailedGIFView" customModule="TrendingGIFs" customModuleProvider="target">
             <connections>
                 <outlet property="gifImageView" destination="E6k-K6-h1Q" id="iRW-Vo-VjC"/>
-                <outlet property="titleLabel" destination="ayU-xv-5se" id="pOC-go-6gL"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -21,25 +20,16 @@
             <rect key="frame" x="0.0" y="0.0" width="265" height="237"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ayU-xv-5se">
-                    <rect key="frame" x="10" y="206.5" width="245" height="20.5"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="E6k-K6-h1Q">
-                    <rect key="frame" x="0.0" y="0.0" width="265" height="196.5"/>
+                    <rect key="frame" x="0.0" y="0.0" width="265" height="237"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="ayU-xv-5se" firstAttribute="top" secondItem="E6k-K6-h1Q" secondAttribute="bottom" constant="10" id="Jf8-tC-A77"/>
-                <constraint firstItem="ayU-xv-5se" firstAttribute="leading" secondItem="JaN-dX-oO9" secondAttribute="leading" constant="10" id="Noo-mz-wWB"/>
+                <constraint firstItem="JaN-dX-oO9" firstAttribute="bottom" secondItem="E6k-K6-h1Q" secondAttribute="bottom" id="Npy-BZ-pOs"/>
                 <constraint firstItem="JaN-dX-oO9" firstAttribute="trailing" secondItem="E6k-K6-h1Q" secondAttribute="trailing" id="RJC-jJ-ht4"/>
-                <constraint firstItem="JaN-dX-oO9" firstAttribute="trailing" secondItem="ayU-xv-5se" secondAttribute="trailing" constant="10" id="kQd-Je-3Hk"/>
                 <constraint firstItem="E6k-K6-h1Q" firstAttribute="top" secondItem="JaN-dX-oO9" secondAttribute="top" id="lIG-CN-X6c"/>
                 <constraint firstItem="E6k-K6-h1Q" firstAttribute="leading" secondItem="JaN-dX-oO9" secondAttribute="leading" id="o6g-qQ-uCc"/>
-                <constraint firstItem="JaN-dX-oO9" firstAttribute="bottom" secondItem="ayU-xv-5se" secondAttribute="bottom" constant="10" id="t0d-m1-q35"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="JaN-dX-oO9"/>
