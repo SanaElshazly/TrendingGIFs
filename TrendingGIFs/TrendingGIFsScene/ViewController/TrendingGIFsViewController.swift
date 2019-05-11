@@ -83,17 +83,11 @@ extension TrendingGIFsViewController:  UICollectionViewDataSource, UICollectionV
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         
-        let lastSectionIndex = (collectionView.numberOfSections)-1
-        let lastItemIndex = (collectionView.numberOfItems(inSection: lastSectionIndex))
-
-        let index =  IndexPath(item: lastItemIndex, section: lastSectionIndex)
-
-
-//        let count = presenter?.gifsCount()
-        if indexPath == index {
-            presenter?.fetchTrendingGIFs(with: gifsList.count)
-//            collectionView.reloadData()
+        if (indexPath.row == gifsList.count - 1 ) { //it's your last cell
+            //Load more data & reload your collection view
+            presenter?.fetchTrendingGIFs(with: gifsList.count)            
         }
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
