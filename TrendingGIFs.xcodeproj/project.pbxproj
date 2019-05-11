@@ -20,13 +20,13 @@
 		CF8AE1862284EF670063BDC2 /* Meta.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8AE1852284EF670063BDC2 /* Meta.swift */; };
 		CF8AE1882284F9E10063BDC2 /* CustomFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8AE1872284F9E10063BDC2 /* CustomFooterView.swift */; };
 		CF8AE18A2284F9F80063BDC2 /* CustomFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF8AE1892284F9F80063BDC2 /* CustomFooterView.xib */; };
+		CF8AE18C22864B520063BDC2 /* GiphyLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8AE18B22864B520063BDC2 /* GiphyLayout.swift */; };
 		CFB0C381227D4DAF001A1DAA /* TrendingGIFs.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB0C380227D4DAF001A1DAA /* TrendingGIFs.swift */; };
 		CFB0C383227E594B001A1DAA /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB0C382227E594B001A1DAA /* Pagination.swift */; };
 		CFB0C386227EEDE8001A1DAA /* TrendingGIFCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFB0C385227EEDE8001A1DAA /* TrendingGIFCollectionViewCell.xib */; };
 		CFB0C388227EF724001A1DAA /* TrendingGIFCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB0C387227EF724001A1DAA /* TrendingGIFCollectionViewCell.swift */; };
 		CFBA875B227F00040028DCEE /* GIFViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBA875A227F00040028DCEE /* GIFViewModel.swift */; };
 		CFBA875D227F07660028DCEE /* GIFImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBA875C227F07660028DCEE /* GIFImage.swift */; };
-		CFBA8761227F3AA20028DCEE /* GiphyLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBA8760227F3AA20028DCEE /* GiphyLayout.swift */; };
 		CFBA877322824D740028DCEE /* DetailedGIFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBA877222824D740028DCEE /* DetailedGIFViewController.swift */; };
 		CFBA877522824E060028DCEE /* DetailedGIFViewConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBA877422824E060028DCEE /* DetailedGIFViewConfigurator.swift */; };
 		CFBA877722824E920028DCEE /* DetailedGIFPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBA877622824E920028DCEE /* DetailedGIFPresenter.swift */; };
@@ -90,13 +90,13 @@
 		CF8AE1852284EF670063BDC2 /* Meta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meta.swift; sourceTree = "<group>"; };
 		CF8AE1872284F9E10063BDC2 /* CustomFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFooterView.swift; sourceTree = "<group>"; };
 		CF8AE1892284F9F80063BDC2 /* CustomFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomFooterView.xib; sourceTree = "<group>"; };
+		CF8AE18B22864B520063BDC2 /* GiphyLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiphyLayout.swift; sourceTree = "<group>"; };
 		CFB0C380227D4DAF001A1DAA /* TrendingGIFs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingGIFs.swift; sourceTree = "<group>"; };
 		CFB0C382227E594B001A1DAA /* Pagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
 		CFB0C385227EEDE8001A1DAA /* TrendingGIFCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrendingGIFCollectionViewCell.xib; sourceTree = "<group>"; };
 		CFB0C387227EF724001A1DAA /* TrendingGIFCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingGIFCollectionViewCell.swift; sourceTree = "<group>"; };
 		CFBA875A227F00040028DCEE /* GIFViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFViewModel.swift; sourceTree = "<group>"; };
 		CFBA875C227F07660028DCEE /* GIFImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFImage.swift; sourceTree = "<group>"; };
-		CFBA8760227F3AA20028DCEE /* GiphyLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiphyLayout.swift; sourceTree = "<group>"; };
 		CFBA877222824D740028DCEE /* DetailedGIFViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedGIFViewController.swift; sourceTree = "<group>"; };
 		CFBA877422824E060028DCEE /* DetailedGIFViewConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedGIFViewConfigurator.swift; sourceTree = "<group>"; };
 		CFBA877622824E920028DCEE /* DetailedGIFPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedGIFPresenter.swift; sourceTree = "<group>"; };
@@ -245,7 +245,7 @@
 				CFB0C385227EEDE8001A1DAA /* TrendingGIFCollectionViewCell.xib */,
 				CFB0C387227EF724001A1DAA /* TrendingGIFCollectionViewCell.swift */,
 				CFBA875A227F00040028DCEE /* GIFViewModel.swift */,
-				CFBA8760227F3AA20028DCEE /* GiphyLayout.swift */,
+				CF8AE18B22864B520063BDC2 /* GiphyLayout.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -633,6 +633,7 @@
 				CFCF56FB227D0B0C007E9EBC /* URLSessionHandler.swift in Sources */,
 				CF0425BC227D4864006AC3B3 /* TrendingGIFsViewConfigurator.swift in Sources */,
 				CF8AE1862284EF670063BDC2 /* Meta.swift in Sources */,
+				CF8AE18C22864B520063BDC2 /* GiphyLayout.swift in Sources */,
 				CFBA877B22824FED0028DCEE /* FetchRandomGIFUseCase.swift in Sources */,
 				CFBA8785228371A10028DCEE /* TrendingGIFsViewRouter.swift in Sources */,
 				CFBA877722824E920028DCEE /* DetailedGIFPresenter.swift in Sources */,
@@ -642,7 +643,6 @@
 				CFB0C388227EF724001A1DAA /* TrendingGIFCollectionViewCell.swift in Sources */,
 				CF0425B4227D343C006AC3B3 /* TrendingGIFsViewController.swift in Sources */,
 				CFB0C383227E594B001A1DAA /* Pagination.swift in Sources */,
-				CFBA8761227F3AA20028DCEE /* GiphyLayout.swift in Sources */,
 				CFCF56F7227BCF88007E9EBC /* Result.swift in Sources */,
 				CFCF5708227D18FA007E9EBC /* URLRequestExtension.swift in Sources */,
 				CFF39F942279ADDC009EC531 /* AppDelegate.swift in Sources */,

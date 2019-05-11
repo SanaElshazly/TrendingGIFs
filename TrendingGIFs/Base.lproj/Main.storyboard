@@ -21,7 +21,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kKX-GL-UzE">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewLayout key="collectionViewLayout" id="3XS-NI-umb" customClass="GiphyLayout" customModule="TrendingGIFs" customModuleProvider="target"/>
+                                <collectionViewLayout key="collectionViewLayout" id="KAb-Lo-3p5" customClass="GiphyLayout" customModule="TrendingGIFs" customModuleProvider="target"/>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="eDz-Rc-iLB">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>

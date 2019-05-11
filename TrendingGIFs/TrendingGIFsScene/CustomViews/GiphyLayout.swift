@@ -41,7 +41,7 @@ class GiphyLayout: UICollectionViewLayout {
     
     override func prepare() {
         // 1. Only calculate once
-        guard cache.isEmpty == true, let collectionView = collectionView else {
+        guard cache.isEmpty == true || cache.isEmpty == false, let collectionView = collectionView else {
             return
         }
         // 2. Pre-Calculates the X Offset for every column and adds an array to increment the currently max Y Offset for each column
