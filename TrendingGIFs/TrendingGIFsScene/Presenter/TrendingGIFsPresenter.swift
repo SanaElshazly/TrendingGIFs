@@ -48,7 +48,7 @@ class TrendingGIFsPresenter : TrendingGIFsPresentable {
         }
     }
     
-    //MARK:- UI Handling
+    //MARK:- Data Mapping Handling
     
     func gif(at index: IndexPath) -> GIFViewModel {
         let gif = gifsList[index.row]

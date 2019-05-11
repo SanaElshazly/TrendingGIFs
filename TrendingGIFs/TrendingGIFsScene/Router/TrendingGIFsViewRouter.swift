@@ -20,7 +20,7 @@ enum Destination {
 class TrendingGIFsViewRouter: Navigator {
     
     private weak var viewController: TrendingGIFsViewController?
-    private var detailedGIF: GIFViewModel?
+    private var detailedGIF = GIFViewModel()
 
     init(viewController: TrendingGIFsViewController) {
         self.viewController = viewController

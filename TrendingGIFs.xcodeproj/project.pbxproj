@@ -247,11 +247,11 @@
 		CFBA876C22824D4D0028DCEE /* DetailedGIFScene */ = {
 			isa = PBXGroup;
 			children = (
-				CF8AE1822283C73E0063BDC2 /* Models */,
 				CFBA876D22824D4D0028DCEE /* CustomViews */,
+				CFBA877122824D4D0028DCEE /* ViewController */,
 				CFBA876E22824D4D0028DCEE /* Presenter */,
 				CFBA877022824D4D0028DCEE /* UseCase */,
-				CFBA877122824D4D0028DCEE /* ViewController */,
+				CF8AE1822283C73E0063BDC2 /* Models */,
 			);
 			path = DetailedGIFScene;
 			sourceTree = "<group>";
@@ -336,9 +336,9 @@
 			isa = PBXGroup;
 			children = (
 				CFB0C384227EEDC8001A1DAA /* CustomViews */,
-				CF0425AF227D33DD006AC3B3 /* Router */,
 				CF0425B2227D33DD006AC3B3 /* ViewController */,
 				CF0425B0227D33DD006AC3B3 /* Presenter */,
+				CF0425AF227D33DD006AC3B3 /* Router */,
 				CF0425B1227D33DD006AC3B3 /* UseCase */,
 				CFCF570C227D1ED4007E9EBC /* Request */,
 				CF0425AC227D33DC006AC3B3 /* Models */,

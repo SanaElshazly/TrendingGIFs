@@ -11,6 +11,7 @@ import Foundation
 protocol DetailedGIFPresentable {
     func startRandomGIF()
     func stopRandomGIF()
+    func populateGIFDetails(_ gif: GIF) ->  GIFViewModel 
 }
 
 class DetailedGIFPresenter : DetailedGIFPresentable {
@@ -42,14 +43,8 @@ class DetailedGIFPresenter : DetailedGIFPresentable {
         }
     }
     
-    func startRandomGIF(){
-        RunLoop.current.add(timer, forMode: .common)
-    }
-    
-    func stopRandomGIF(){
-        timer.invalidate()
-    }
-    
+    //MARK:- Data Mapping Handling
+
     func populateGIFDetails(_ gif: GIF) ->  GIFViewModel {
         var gifViewModel = GIFViewModel()
         gifViewModel.title = gif.title
@@ -60,5 +55,11 @@ class DetailedGIFPresenter : DetailedGIFPresentable {
 }
 
 extension DetailedGIFPresenter {
+    func startRandomGIF(){
+        RunLoop.current.add(timer, forMode: .common)
+    }
     
+    func stopRandomGIF(){
+        timer.invalidate()
+    }
 }

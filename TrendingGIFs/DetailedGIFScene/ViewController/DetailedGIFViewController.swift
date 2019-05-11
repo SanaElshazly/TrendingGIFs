@@ -25,7 +25,7 @@ class DetailedGIFViewController: UIViewController {
     var presenter: DetailedGIFPresentable?
     let configurator = DetailedGIFViewConfigurator()
     let playerController = AVPlayerViewController()
-    var detailedGIF: GIFViewModel?
+    var detailedGIF = GIFViewModel()
     let defaultUrl = URL(string:"https://media0.giphy.com/media/eYilisUwipOEM/200w.mp4")
     var player : AVPlayer?
     
@@ -33,7 +33,7 @@ class DetailedGIFViewController: UIViewController {
         super.viewDidLoad()
         
         configurator.configure(viewController: self)
-        configureAnimatedGIFView(with: detailedGIF ?? GIFViewModel())
+        configureAnimatedGIFView(with: detailedGIF)
         presenter?.startRandomGIF()
     }
     
@@ -50,7 +50,7 @@ class DetailedGIFViewController: UIViewController {
         playerController.player = player
         self.addChild(playerController)
 
-        animatedGIFView.configure(url: detailedGIF?.images?.fixed_width.mp4 ?? "", playerView: playerController.view)
+        animatedGIFView.configure(url: gif.images?.fixed_width.mp4 ?? "", playerView: playerController.view)
         player?.play()
     }
     

@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import AVKit
-import AVFoundation
 import Reusable
 
 class AnimatedGIFView: UIView, NibOwnerLoadable {
