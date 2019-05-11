@@ -297,7 +297,6 @@
 				CFCF5700227D0F7A007E9EBC /* Extensions */,
 				CFCF56EC227BC381007E9EBC /* Enums */,
 				CFCF56ED227BC381007E9EBC /* Protocols */,
-				CFCF570F227D222C007E9EBC /* Helpers */,
 			);
 			path = NetworkLayer;
 			sourceTree = "<group>";
@@ -352,13 +351,6 @@
 				CFCF570D227D1EE2007E9EBC /* GiphyRequest.swift */,
 			);
 			path = Request;
-			sourceTree = "<group>";
-		};
-		CFCF570F227D222C007E9EBC /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Helpers;
 			sourceTree = "<group>";
 		};
 		CFF39F872279ADDC009EC531 = {

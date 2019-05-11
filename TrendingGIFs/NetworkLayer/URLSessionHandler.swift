@@ -22,23 +22,9 @@ final class URLSessionHandler: ProviderProtocol {
         let request = URLRequest(service: service)
         task = session.dataTask(request: request, completionHandler: { [weak self] data, response, error in
             let httpResponse = response as? HTTPURLResponse
-            
-            guard let json = data else {
-                print("No data")
-                return
-            }
-            
-            guard json.count != 0 else {
-                print("Zero bytes of data")
-                return
-            }
-            print(String(decoding: json, as: UTF8.self))
-            
-            
             self?.handleDataResponse(data: data, response: httpResponse, error: error, completion: completion)
         })
         
-
         task?.resume()
     }
     
@@ -48,8 +34,6 @@ final class URLSessionHandler: ProviderProtocol {
         
         switch response.statusCode {
         case 200...299:
-//            print( try? JSONDecoder().decode(TrendingGIFs.self, from: data!))
-
             guard let data = data, let model = try? JSONDecoder().decode(T.self, from: data) else { return
                 completion(.failure(.unknown)) }
             completion(.success(model))
