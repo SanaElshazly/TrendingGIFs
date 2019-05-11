@@ -39,7 +39,7 @@ enum GiphyRequest: EndPointProtocol {
         switch self {
         case let .trendingGIFs(offset):
             return ["api_key": "t0zOHsUMtDuAJ5MjNwovdnzrtVQBWiRh",
-                    "limit": 50,
+                    "limit": 20,
                     "offset": offset,
                     "rating": "g"]
         case .randomGIF:
