@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5817E9C8A5B9738DFC48150B /* libPods-TrendingGIFsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C958F0E795474F5E58F15832 /* libPods-TrendingGIFsTests.a */; };
-		A2600992C65D00B09C01D714 /* libPods-TrendingGIFsUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1436EE1F673D861F225432A /* libPods-TrendingGIFsUITests.a */; };
 		CF0425B4227D343C006AC3B3 /* TrendingGIFsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0425B3227D343B006AC3B3 /* TrendingGIFsViewController.swift */; };
 		CF0425B6227D3466006AC3B3 /* TrendingGIFsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0425B5227D3466006AC3B3 /* TrendingGIFsPresenter.swift */; };
 		CF0425B8227D38B1006AC3B3 /* FetchTrendingGIFsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0425B7227D38B1006AC3B3 /* FetchTrendingGIFsUseCase.swift */; };
@@ -47,27 +45,8 @@
 		CFF39F992279ADDC009EC531 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFF39F972279ADDC009EC531 /* Main.storyboard */; };
 		CFF39F9B2279ADDC009EC531 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFF39F9A2279ADDC009EC531 /* Assets.xcassets */; };
 		CFF39F9E2279ADDC009EC531 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFF39F9C2279ADDC009EC531 /* LaunchScreen.storyboard */; };
-		CFF39FA92279ADDC009EC531 /* TrendingGIFsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF39FA82279ADDC009EC531 /* TrendingGIFsTests.swift */; };
-		CFF39FB42279ADDC009EC531 /* TrendingGIFsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF39FB32279ADDC009EC531 /* TrendingGIFsUITests.swift */; };
 		FC99B7E9F66727CC664BD463 /* libPods-TrendingGIFs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D05A655FB21BCE8CFE4300E /* libPods-TrendingGIFs.a */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		CFF39FA52279ADDC009EC531 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CFF39F882279ADDC009EC531 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CFF39F8F2279ADDC009EC531;
-			remoteInfo = TrendingGIFs;
-		};
-		CFF39FB02279ADDC009EC531 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CFF39F882279ADDC009EC531 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CFF39F8F2279ADDC009EC531;
-			remoteInfo = TrendingGIFs;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		06546BF87D71339A20338BE6 /* Pods-TrendingGIFsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrendingGIFsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrendingGIFsTests/Pods-TrendingGIFsTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -117,12 +96,6 @@
 		CFF39F9A2279ADDC009EC531 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CFF39F9D2279ADDC009EC531 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CFF39F9F2279ADDC009EC531 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CFF39FA42279ADDC009EC531 /* TrendingGIFsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrendingGIFsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CFF39FA82279ADDC009EC531 /* TrendingGIFsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingGIFsTests.swift; sourceTree = "<group>"; };
-		CFF39FAA2279ADDC009EC531 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CFF39FAF2279ADDC009EC531 /* TrendingGIFsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrendingGIFsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CFF39FB32279ADDC009EC531 /* TrendingGIFsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingGIFsUITests.swift; sourceTree = "<group>"; };
-		CFF39FB52279ADDC009EC531 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D73BCBB167AB6BA10B03A390 /* Pods-TrendingGIFsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrendingGIFsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TrendingGIFsUITests/Pods-TrendingGIFsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F1436EE1F673D861F225432A /* libPods-TrendingGIFsUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TrendingGIFsUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -133,22 +106,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC99B7E9F66727CC664BD463 /* libPods-TrendingGIFs.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CFF39FA12279ADDC009EC531 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5817E9C8A5B9738DFC48150B /* libPods-TrendingGIFsTests.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CFF39FAC2279ADDC009EC531 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A2600992C65D00B09C01D714 /* libPods-TrendingGIFsUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,8 +314,6 @@
 			isa = PBXGroup;
 			children = (
 				CFF39F922279ADDC009EC531 /* TrendingGIFs */,
-				CFF39FA72279ADDC009EC531 /* TrendingGIFsTests */,
-				CFF39FB22279ADDC009EC531 /* TrendingGIFsUITests */,
 				CFF39F912279ADDC009EC531 /* Products */,
 				6B5743266A39832AA9F19E73 /* Pods */,
 				615FE454CC4C2DC18418B540 /* Frameworks */,
@@ -369,8 +324,6 @@
 			isa = PBXGroup;
 			children = (
 				CFF39F902279ADDC009EC531 /* TrendingGIFs.app */,
-				CFF39FA42279ADDC009EC531 /* TrendingGIFsTests.xctest */,
-				CFF39FAF2279ADDC009EC531 /* TrendingGIFsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -388,24 +341,6 @@
 				CFF39F9F2279ADDC009EC531 /* Info.plist */,
 			);
 			path = TrendingGIFs;
-			sourceTree = "<group>";
-		};
-		CFF39FA72279ADDC009EC531 /* TrendingGIFsTests */ = {
-			isa = PBXGroup;
-			children = (
-				CFF39FA82279ADDC009EC531 /* TrendingGIFsTests.swift */,
-				CFF39FAA2279ADDC009EC531 /* Info.plist */,
-			);
-			path = TrendingGIFsTests;
-			sourceTree = "<group>";
-		};
-		CFF39FB22279ADDC009EC531 /* TrendingGIFsUITests */ = {
-			isa = PBXGroup;
-			children = (
-				CFF39FB32279ADDC009EC531 /* TrendingGIFsUITests.swift */,
-				CFF39FB52279ADDC009EC531 /* Info.plist */,
-			);
-			path = TrendingGIFsUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -429,44 +364,6 @@
 			productReference = CFF39F902279ADDC009EC531 /* TrendingGIFs.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CFF39FA32279ADDC009EC531 /* TrendingGIFsTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CFF39FBB2279ADDC009EC531 /* Build configuration list for PBXNativeTarget "TrendingGIFsTests" */;
-			buildPhases = (
-				A6A9F4603EC54BCB6183D040 /* [CP] Check Pods Manifest.lock */,
-				CFF39FA02279ADDC009EC531 /* Sources */,
-				CFF39FA12279ADDC009EC531 /* Frameworks */,
-				CFF39FA22279ADDC009EC531 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CFF39FA62279ADDC009EC531 /* PBXTargetDependency */,
-			);
-			name = TrendingGIFsTests;
-			productName = TrendingGIFsTests;
-			productReference = CFF39FA42279ADDC009EC531 /* TrendingGIFsTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		CFF39FAE2279ADDC009EC531 /* TrendingGIFsUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CFF39FBE2279ADDC009EC531 /* Build configuration list for PBXNativeTarget "TrendingGIFsUITests" */;
-			buildPhases = (
-				C8456E3BE7880C4A72A5375E /* [CP] Check Pods Manifest.lock */,
-				CFF39FAB2279ADDC009EC531 /* Sources */,
-				CFF39FAC2279ADDC009EC531 /* Frameworks */,
-				CFF39FAD2279ADDC009EC531 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CFF39FB12279ADDC009EC531 /* PBXTargetDependency */,
-			);
-			name = TrendingGIFsUITests;
-			productName = TrendingGIFsUITests;
-			productReference = CFF39FAF2279ADDC009EC531 /* TrendingGIFsUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -480,16 +377,6 @@
 					CFF39F8F2279ADDC009EC531 = {
 						CreatedOnToolsVersion = 9.0.1;
 						ProvisioningStyle = Automatic;
-					};
-					CFF39FA32279ADDC009EC531 = {
-						CreatedOnToolsVersion = 9.0.1;
-						ProvisioningStyle = Automatic;
-						TestTargetID = CFF39F8F2279ADDC009EC531;
-					};
-					CFF39FAE2279ADDC009EC531 = {
-						CreatedOnToolsVersion = 9.0.1;
-						ProvisioningStyle = Automatic;
-						TestTargetID = CFF39F8F2279ADDC009EC531;
 					};
 				};
 			};
@@ -507,8 +394,6 @@
 			projectRoot = "";
 			targets = (
 				CFF39F8F2279ADDC009EC531 /* TrendingGIFs */,
-				CFF39FA32279ADDC009EC531 /* TrendingGIFsTests */,
-				CFF39FAE2279ADDC009EC531 /* TrendingGIFsUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -527,20 +412,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CFF39FA22279ADDC009EC531 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CFF39FAD2279ADDC009EC531 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -556,42 +427,6 @@
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-TrendingGIFs-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A6A9F4603EC54BCB6183D040 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TrendingGIFsTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C8456E3BE7880C4A72A5375E /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TrendingGIFsUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -640,36 +475,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CFF39FA02279ADDC009EC531 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CFF39FA92279ADDC009EC531 /* TrendingGIFsTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CFF39FAB2279ADDC009EC531 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CFF39FB42279ADDC009EC531 /* TrendingGIFsUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		CFF39FA62279ADDC009EC531 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CFF39F8F2279ADDC009EC531 /* TrendingGIFs */;
-			targetProxy = CFF39FA52279ADDC009EC531 /* PBXContainerItemProxy */;
-		};
-		CFF39FB12279ADDC009EC531 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CFF39F8F2279ADDC009EC531 /* TrendingGIFs */;
-			targetProxy = CFF39FB02279ADDC009EC531 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		CFF39F972279ADDC009EC531 /* Main.storyboard */ = {
@@ -834,76 +640,6 @@
 			};
 			name = Release;
 		};
-		CFF39FBC2279ADDC009EC531 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 06546BF87D71339A20338BE6 /* Pods-TrendingGIFsTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 76VDA98VQ3;
-				INFOPLIST_FILE = TrendingGIFsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = picnic.TrendingGIFsTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TrendingGIFs.app/TrendingGIFs";
-			};
-			name = Debug;
-		};
-		CFF39FBD2279ADDC009EC531 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = AFD88FEB41AD7268E176D908 /* Pods-TrendingGIFsTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 76VDA98VQ3;
-				INFOPLIST_FILE = TrendingGIFsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = picnic.TrendingGIFsTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TrendingGIFs.app/TrendingGIFs";
-			};
-			name = Release;
-		};
-		CFF39FBF2279ADDC009EC531 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BF15025072EDBC9834726677 /* Pods-TrendingGIFsUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 76VDA98VQ3;
-				INFOPLIST_FILE = TrendingGIFsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = picnic.TrendingGIFsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = TrendingGIFs;
-			};
-			name = Debug;
-		};
-		CFF39FC02279ADDC009EC531 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D73BCBB167AB6BA10B03A390 /* Pods-TrendingGIFsUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 76VDA98VQ3;
-				INFOPLIST_FILE = TrendingGIFsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = picnic.TrendingGIFsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = TrendingGIFs;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -921,24 +657,6 @@
 			buildConfigurations = (
 				CFF39FB92279ADDC009EC531 /* Debug */,
 				CFF39FBA2279ADDC009EC531 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CFF39FBB2279ADDC009EC531 /* Build configuration list for PBXNativeTarget "TrendingGIFsTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CFF39FBC2279ADDC009EC531 /* Debug */,
-				CFF39FBD2279ADDC009EC531 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CFF39FBE2279ADDC009EC531 /* Build configuration list for PBXNativeTarget "TrendingGIFsUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CFF39FBF2279ADDC009EC531 /* Debug */,
-				CFF39FC02279ADDC009EC531 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

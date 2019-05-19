@@ -11,7 +11,6 @@ import Foundation
 class FetchTrendingGIFsUseCase {
     
     private let sessionProvider = URLSessionHandler()
-    private var isFetchInProgress = false
     private var offset = 0
     
     func setOffset(_ offset: Int) {

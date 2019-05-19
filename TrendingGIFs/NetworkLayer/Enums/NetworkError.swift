@@ -6,7 +6,19 @@
 //  Copyright © 2019 Sana Elshazly. All rights reserved.
 //
 
-enum NetworkError {
-    case unknown
-    case noJSONData
+// MARK: - Custom NetworkError object
+
+enum NetworkError : Error {
+    case failedLoading
+    case decodingFailed
+    case failed
+
+    var errorDescription: String? {
+        switch self {
+        case .failedLoading: return "Error Found : Failed to load data."
+        case .decodingFailed: return "Error Found : Unable to Decode the data."
+        case .failed : return "Error Found : Network Request failed"
+
+        }
+    }
 }

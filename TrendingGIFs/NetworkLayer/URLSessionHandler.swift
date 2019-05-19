@@ -29,16 +29,16 @@ final class URLSessionHandler: ProviderProtocol {
     }
     
     private func handleDataResponse<T: Decodable>(data: Data?, response: HTTPURLResponse?, error: Error?, completion: (Result<T>) -> ()) {
-        guard error == nil else { return completion(.failure(.unknown)) }
-        guard let response = response else { return completion(.failure(.noJSONData)) }
+        guard error == nil else { return completion(.failure(.failed)) }
+        guard let response = response else { return completion(.failure(.failedLoading)) }
         
         switch response.statusCode {
         case 200...299:
             guard let data = data, let model = try? JSONDecoder().decode(T.self, from: data) else { return
-                completion(.failure(.unknown)) }
+                completion(.failure(.decodingFailed)) }
             completion(.success(model))
         default:
-            completion(.failure(.unknown))
+            completion(.failure(.failed))
         }
     }
 
