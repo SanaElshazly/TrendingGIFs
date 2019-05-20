@@ -37,13 +37,12 @@ After exploring the Giphy API response and doing some research I came to a decis
 When it comes to displaying the animated image in the second screen, I chose the `fixed_width` image object using the URL for GIF in .MP4 format from the property `mp4` . There is many reasons behind this decision, the first one that it was already mentioned in the API documentation this it's good for mobile use. The second reason is that even though animated GIFs are used mainly for short videos, they result in large files, heavy bandwidth utilization, slow loading times, and sub-optimal user experience. Also, resizing and manipulating animated GIFs to match the graphic design of your app might be a lengthy, cpu-intensive process, as it consists of dozens or even hundreds of frames being manipulated individually. So why not reduce the size of animated GIFs by using modern video formats instead? To conclude, I ended up choosing `MP4` format as I found it has the least size among all the other formats, this means that you save a big percentage of your bandwidth and load time, while showing the same animation to your users.
 
 
-### Error Handling
+## Error Handling
 
 I used the `Result Pattern` for error handling, means we have an enum with 2 cases, one for success with associated type, and one for failure with error type. In addition to using a switch statement to switch between the 2 cases, which allows powerful pattern matching, and ensures all possible results are covered.
 
 
-
-### Todos
+## Todos
 Some nice-to-haves to be implemented:
  - Write Unit Tests and UI Tests
  - Implement the prefetching UICollectionView API
