@@ -27,7 +27,6 @@ To run GIF Me app, follow these steps:
 ## Third Party Libraries
 
 [Reusable](https://github.com/AliSoftware/Reusable): A swift mixin for reusing views easily and in a type-safe way.
-
 [SDWebImage](https://github.com/SDWebImage/SDWebImage): Asynchronous image downloader as a UIImageView category, used for easily downloading and fetching the GIF animated images in the UICollectionView.
 
 ## GIFs Rendering
